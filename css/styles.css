@@ -37,6 +37,7 @@ body {
 }
 
 .container {
+
     margin-left: auto;
     margin-right: auto;
     width: 1158px;
@@ -52,10 +53,6 @@ body {
     letter-spacing: 0.03em;
 }
 
-.head-content .link {
-    color: var(--text-color);
-}
-
 .head-studio,
 .site-nav .link {
     color: var(--dark-color);
@@ -65,15 +62,34 @@ body {
     color: var(--primary-brand-color);
 }
 
-.anchors {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+.main-nav,
+.link-nav,
+.site-nav,
+.head-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.relations {
-    font-weight: 400;
+
+
+.main-nav {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.logo-web {
+    margin-right: 76px;
+}
+
+.site-nav .item:not(:last-child),
+.head-content .item:not(:last-child){
+    margin-right: 40px;
+}
+
+
+.anchors {
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -82,6 +98,17 @@ body {
 .anchors:hover,
 .anchors:focus {
     color: var(--primary-brand-color);
+}
+
+.head-content .link {
+    color: var(--text-color);
+}
+
+.relations {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .relations:hover,
@@ -159,9 +186,21 @@ body {
     margin: 0;
 }
 
-.list.team {
-    background-color: var(--white-color);
+/* Studio / Description of studio */
+
+.hide-text {
+    display: none;
 }
+
+.main-desc,
+.list.desc {
+    display: flex;
+}
+
+.list.desc {
+    flex-direction: row;
+}
+
 
 .desc-title,
 .team-title {
@@ -172,6 +211,8 @@ body {
     letter-spacing: 0.02em;
     padding-bottom: 8px;
     margin: 0;
+    
+    text-align: left;
 }
 
 .desc-text,
@@ -183,26 +224,59 @@ body {
     letter-spacing: 0.02em;
     padding: 0;
     margin: 0;
+
+    text-align: left;
 }
+
+/* Portfolio / Description of the works of the studio */
+
+.list.prt {
+    display: flex;
+    justify-content: center;
+}
+
+.list.prt > .item:not(:last-child) {
+    margin-right: 24px;
+}
+
 
 /* Contacts / Main team of studio */
-
-.container .section-title.team {
-    padding-top: 120px;
-}
 
 .section-team {
     background-color: var(--light-color);
     padding-bottom: 120px;
 }
 
+.container .section-title.team {
+    padding-top: 120px;
+}
+
+.main-cont {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.list.team {
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.list.team:not(:last-child) {
+    margin-right: 24px;
+}
+
 .team-title {
     margin-top: 32px;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .team-text {
     padding-bottom: 32px;
+    text-align: center;
 }
 
 
@@ -212,10 +286,19 @@ body {
 /* MAIN CONTENT */
 
 .section-title.prt {
-    padding: 0;
-    margin: 0;
-    margin-top: 96px;
+    display: none;
 }
+
+.btn-prt.list {
+    margin-top: 96px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-item:not(:last-child) {
+    margin-right: 24px;
+}
+
 
 .btn-filters {
     background-color: var(--light-color);
@@ -242,6 +325,28 @@ body {
     margin: 0;
     margin-bottom: 72px;
 }
+
+.main-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter {
+    border: 1px solid #E7E9FC;
+    width: 360px;
+    margin-right: 24px;
+    margin-bottom: 48px;
+}
+
+.filter:nth-child(3n) {
+    margin-right: 0;
+}
+
+.filter:nth-child(n+7) {
+    margin-bottom: 0;
+}
+
 
 .prt-title {
     color: var(--dark-color);
@@ -270,6 +375,17 @@ body {
     background-color: var(--dark-color);
 }
 
+.footer .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.foot-logo {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
 .footer-studio {
     color: var(--light-color);
     font-family: 'Raleway';
@@ -285,9 +401,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
-
-.footer .container {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    text-align: left;
+    width: 264px;
+    margin-bottom: 0;
 }
