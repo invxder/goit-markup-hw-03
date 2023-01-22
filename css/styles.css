@@ -6,6 +6,10 @@
     margin: 0;
 }
 
+.display-block {
+    display: block;
+}
+
 :root {
     --primary-brand-color: #4D4AE5;
     --secondary-brand-color: #404BBF;
@@ -42,6 +46,8 @@ body {
 .header {
     background-color: var(--white-color);
     border-bottom: 1px solid var(--accent-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .container {
@@ -76,13 +82,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-
-
-.main-nav {
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .logo-web {
@@ -253,11 +252,11 @@ body {
 .main-team {
     background-color: var(--light-color);
     padding-bottom: 120px;
+    padding-top: 120px;
 }
 
 .main-team .section-title {
-    padding-top: 120px;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
     text-align: center;
 }
 
@@ -289,6 +288,7 @@ body {
 
 
 .prt-section {
+    padding-top: 96px;
     padding-bottom: 120px;
 }
 
@@ -297,7 +297,6 @@ body {
 }
 
 .btn-prt.list {
-    margin-top: 96px;
     display: flex;
     justify-content: center;
     gap: 24px;
@@ -338,13 +337,13 @@ body {
 }
 
 .filter {
-    border: 1px solid #E7E9FC;
     width: 360px;
 }
 
 .prt-block {
-    margin: 32px 0;
-    margin-left: 16px;
+    padding: 32px 0 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
 }
 
 .prt-title {
@@ -368,9 +367,6 @@ body {
 
 .footer {
     background-color: var(--dark-color);
-}
-
-.footer .container {
     padding-top: 100px;
     padding-bottom: 100px;
 }
